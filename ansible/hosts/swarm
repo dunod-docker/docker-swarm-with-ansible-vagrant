@@ -1,0 +1,18 @@
+swarm-manager   ansible_host=10.100.192.200 ansible_connection=local
+swarm-worker-01 ansible_host=10.100.192.201 ansible_connection=ssh ansible_ssh_private_key_file=/vagrant/.vagrant/machines/swarm-worker-01/virtualbox/private_key
+swarm-worker-02 ansible_host=10.100.192.202 ansible_connection=ssh ansible_ssh_private_key_file=/vagrant/.vagrant/machines/swarm-worker-02/virtualbox/private_key
+swarm-worker-03 ansible_host=10.100.192.203 ansible_connection=ssh ansible_ssh_private_key_file=/vagrant/.vagrant/machines/swarm-worker-03/virtualbox/private_key
+
+[docker_engine]
+swarm-manager
+swarm-worker-01
+swarm-worker-02
+swarm-worker-03
+
+[docker_swarm_manager]
+swarm-manager
+
+[docker_swarm_worker]
+swarm-worker-01
+swarm-worker-02
+swarm-worker-03
